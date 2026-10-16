@@ -1,0 +1,6 @@
+{
+  "name": "JW Marriott Hotel Muscat",
+  "description": "Official overview and booking experience for JW Marriott Hotel Muscat in Madinat Al Irfan, Oman. Featuring luxury rooms and suites, award-winning dining, Spa by JW, event spaces, and Marriott Bonvoy privileges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

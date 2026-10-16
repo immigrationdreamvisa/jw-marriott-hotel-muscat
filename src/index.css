@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Cinzel', 'Cormorant Garamond', serif;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color: #1c1c1c;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-marriott {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+/* Custom hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Section scroll offset for sticky header */
+.scroll-section-offset {
+  scroll-margin-top: 110px;
+}
+
+/* =========================================================================
+   CLEAN 1-PAGE PRINT MEDIA STYLES FOR OFFICIAL TAX INVOICE & RECEIPTS
+   ========================================================================= */
+@media print {
+  /* Hide the rest of the application (#root) when printing the tax invoice portal */
+  body > *:not(#tax-invoice-modal-portal) {
+    display: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #tax-invoice-modal-portal {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+  }
+
+  #tax-invoice-modal-portal > div {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  #printable-tax-invoice {
+    display: block !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Force hide all control bars, close buttons, and interactive UI in print */
+  .no-print,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm 14mm;
+  }
+}
+
